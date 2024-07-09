@@ -11,6 +11,7 @@
             height: 100%;
             width: 100%;
             font-family: Arial, sans-serif;
+            background-color: #000; /* Fallback color */
         }
         .background {
             background-image: url('Bg1.jpg');
@@ -21,21 +22,36 @@
             align-items: center;
             justify-content: flex-start;
             padding-left: 5%;
+            box-sizing: border-box;
         }
         .content {
-            width: 25%;
-            color: Black;
+            max-width: 400px;
+            width: 100%;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8); /* Added background for better readability */
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
         .social-icons {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
         }
         .social-icons img {
             width: 30px;
             height: 30px;
             margin-right: 10px;
+            margin-bottom: 10px; /* Ensure proper spacing in smaller screens */
         }
         a {
-            color: White;
+            color: black;
             text-decoration: none;
         }
     </style>
@@ -43,11 +59,10 @@
 <body>
     <div class="background">
         <div class="content">
-            <img src="Dp.png" alt="Me :)" width="100" height="125">
-            <h1><Br>Lalu Nair</h1>
-            <p>Hi, I'm Lalu Nair, hailing from the beautiful city of Trivandrum, Kerala. As an IT Engineer, I thrive on technology, but my true passions lie in capturing moments through photography and exploring new places. My friends are my greatest source of joy and inspiration. Feel free to connect with me on social media using the links below. 
-
-<br><br>Let's share our journeys and create memories together!</br></br></p>
+            <img src="Dp.png" alt="Me :)" class="profile-pic">
+            <h1>Lalu Nair</h1>
+            <p>Hi, I'm Lalu Nair, hailing from the beautiful city of Trivandrum, Kerala. As an IT Engineer, I thrive on technology, but my true passions lie in capturing moments through photography and exploring new places. My friends are my greatest source of joy and inspiration. Feel free to connect with me on social media using the links below.</p>
+            <p>Let's share our journeys and create memories together!</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/lalusnair">
                     <img src="FB.png" alt="Facebook">
